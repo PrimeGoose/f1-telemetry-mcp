@@ -1,0 +1,510 @@
+[
+  {
+    "id": "q01",
+    "question": "How many laps are in the session?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "totalLaps",
+    "expected": 8
+  },
+  {
+    "id": "q02",
+    "question": "How many valid laps were completed?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "validLaps",
+    "expected": 8
+  },
+  {
+    "id": "q03",
+    "question": "Which lap was the fastest?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "fastestLap.lapNumber",
+    "expected": 1
+  },
+  {
+    "id": "q04",
+    "question": "What was the fastest lap time in milliseconds?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "fastestLap.lapTimeMs",
+    "expected": 82676,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q05",
+    "question": "What was the fastest lap time formatted as m:ss.sss?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "fastestLap.lapTime",
+    "expected": "1:22.676"
+  },
+  {
+    "id": "q06",
+    "question": "What was the top speed reached in the session (km/h)?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "topSpeedKph",
+    "expected": 326.5,
+    "tolerance": 0.1,
+    "unit": "kph"
+  },
+  {
+    "id": "q07",
+    "question": "How long is the circuit in metres?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "trackLengthM",
+    "expected": 4500,
+    "tolerance": 0,
+    "unit": "m"
+  },
+  {
+    "id": "q08",
+    "question": "What type of session is this?",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "sessionType",
+    "expected": "Practice"
+  },
+  {
+    "id": "q09",
+    "question": "Is this real or sample data? Answer true if it is sample data.",
+    "tools": [
+      "get_session_summary"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "sample",
+    "expected": true
+  },
+  {
+    "id": "q10",
+    "question": "What was the lap time of lap 5 in milliseconds?",
+    "tools": [
+      "get_lap_times"
+    ],
+    "call": {
+      "tool": "get_lap_times",
+      "args": {}
+    },
+    "path": "4.lapTimeMs",
+    "expected": 83720,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q11",
+    "question": "Which lap was the slowest?",
+    "tools": [
+      "get_lap_times"
+    ],
+    "call": {
+      "tool": "get_lap_times",
+      "args": {}
+    },
+    "path": "@max:lapTimeMs.lapNumber",
+    "expected": 8
+  },
+  {
+    "id": "q12",
+    "question": "What was the slowest lap time in milliseconds?",
+    "tools": [
+      "get_lap_times"
+    ],
+    "call": {
+      "tool": "get_lap_times",
+      "args": {}
+    },
+    "path": "@max:lapTimeMs.lapTimeMs",
+    "expected": 84379,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q13",
+    "question": "What was the sector 2 time on lap 3 in milliseconds?",
+    "tools": [
+      "get_lap_times"
+    ],
+    "call": {
+      "tool": "get_lap_times",
+      "args": {}
+    },
+    "path": "2.sectorTimesMs.1",
+    "expected": 30465,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q14",
+    "question": "What was the sector 3 time on lap 8 in milliseconds?",
+    "tools": [
+      "get_lap_times"
+    ],
+    "call": {
+      "tool": "get_lap_times",
+      "args": {}
+    },
+    "path": "7.sectorTimesMs.2",
+    "expected": 28955,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q15",
+    "question": "Which lap had the fastest sector 1?",
+    "tools": [
+      "get_fastest_sector"
+    ],
+    "call": {
+      "tool": "get_fastest_sector",
+      "args": {
+        "sector": 1
+      }
+    },
+    "path": "lapNumber",
+    "expected": 1
+  },
+  {
+    "id": "q16",
+    "question": "What is the fastest sector 2 time in milliseconds?",
+    "tools": [
+      "get_fastest_sector"
+    ],
+    "call": {
+      "tool": "get_fastest_sector",
+      "args": {
+        "sector": 2
+      }
+    },
+    "path": "sectorTimeMs",
+    "expected": 30065,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q17",
+    "question": "What is the fastest sector 3 time in milliseconds?",
+    "tools": [
+      "get_fastest_sector"
+    ],
+    "call": {
+      "tool": "get_fastest_sector",
+      "args": {
+        "sector": 3
+      }
+    },
+    "path": "sectorTimeMs",
+    "expected": 28278,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q18",
+    "question": "What is the theoretical best lap time in milliseconds?",
+    "tools": [
+      "get_fastest_sector"
+    ],
+    "call": {
+      "tool": "get_fastest_sector",
+      "args": {
+        "sector": 1
+      }
+    },
+    "path": "theoreticalBestMs",
+    "expected": 82676,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q19",
+    "question": "How much slower was lap 2 than lap 1, in milliseconds?",
+    "tools": [
+      "compare_laps"
+    ],
+    "call": {
+      "tool": "compare_laps",
+      "args": {
+        "lapA": 1,
+        "lapB": 2
+      }
+    },
+    "path": "lapTimeDeltaMs",
+    "expected": 450,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q20",
+    "question": "How much time did lap 2 lose to lap 1 in sector 3, in milliseconds?",
+    "tools": [
+      "compare_laps"
+    ],
+    "call": {
+      "tool": "compare_laps",
+      "args": {
+        "lapA": 1,
+        "lapB": 2
+      }
+    },
+    "path": "sectorDeltasMs.2",
+    "expected": 175,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q21",
+    "question": "What is the lap time delta of lap 8 relative to lap 1, in milliseconds?",
+    "tools": [
+      "compare_laps"
+    ],
+    "call": {
+      "tool": "compare_laps",
+      "args": {
+        "lapA": 1,
+        "lapB": 8
+      }
+    },
+    "path": "lapTimeDeltaMs",
+    "expected": 1703,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q22",
+    "question": "How much faster was lap 4 than lap 3, in milliseconds (positive number)?",
+    "tools": [
+      "compare_laps"
+    ],
+    "call": {
+      "tool": "compare_laps",
+      "args": {
+        "lapA": 4,
+        "lapB": 3
+      }
+    },
+    "path": "lapTimeDeltaMs",
+    "expected": 445,
+    "tolerance": 0,
+    "unit": "ms"
+  },
+  {
+    "id": "q23",
+    "question": "How many braking zones are there on lap 1?",
+    "tools": [
+      "find_braking_points"
+    ],
+    "call": {
+      "tool": "find_braking_points",
+      "args": {
+        "lapNumber": 1
+      }
+    },
+    "path": "count",
+    "expected": 6
+  },
+  {
+    "id": "q24",
+    "question": "At what distance (m) does the first braking zone on lap 1 start?",
+    "tools": [
+      "find_braking_points"
+    ],
+    "call": {
+      "tool": "find_braking_points",
+      "args": {
+        "lapNumber": 1
+      }
+    },
+    "path": "zones.0.startDistance",
+    "expected": 820,
+    "tolerance": 10,
+    "unit": "m"
+  },
+  {
+    "id": "q25",
+    "question": "What is the minimum speed in the slowest corner on lap 1 (km/h)?",
+    "tools": [
+      "find_braking_points"
+    ],
+    "call": {
+      "tool": "find_braking_points",
+      "args": {
+        "lapNumber": 1
+      }
+    },
+    "path": "zones.@min:minSpeedKph.minSpeedKph",
+    "expected": 75.4,
+    "tolerance": 0.5,
+    "unit": "kph"
+  },
+  {
+    "id": "q26",
+    "question": "At what distance (m) is the slowest braking zone on lap 1 located (zone start)?",
+    "tools": [
+      "find_braking_points"
+    ],
+    "call": {
+      "tool": "find_braking_points",
+      "args": {
+        "lapNumber": 1
+      }
+    },
+    "path": "zones.@min:minSpeedKph.startDistance",
+    "expected": 2320,
+    "tolerance": 10,
+    "unit": "m"
+  },
+  {
+    "id": "q27",
+    "question": "What was the minimum speed in the final braking zone on lap 8 (km/h)?",
+    "tools": [
+      "find_braking_points"
+    ],
+    "call": {
+      "tool": "find_braking_points",
+      "args": {
+        "lapNumber": 8
+      }
+    },
+    "path": "zones.5.minSpeedKph",
+    "expected": 83.3,
+    "tolerance": 0.5,
+    "unit": "kph"
+  },
+  {
+    "id": "q28",
+    "question": "Which tyre has the highest average wear per lap?",
+    "tools": [
+      "get_tyre_wear"
+    ],
+    "call": {
+      "tool": "get_tyre_wear",
+      "args": {}
+    },
+    "path": "@argmax:avgWearPerLapPct",
+    "expected": "FR"
+  },
+  {
+    "id": "q29",
+    "question": "What is the average front-left tyre wear per lap (%)?",
+    "tools": [
+      "get_tyre_wear"
+    ],
+    "call": {
+      "tool": "get_tyre_wear",
+      "args": {}
+    },
+    "path": "avgWearPerLapPct.FL",
+    "expected": 2.26,
+    "tolerance": 0.02,
+    "unit": "%"
+  },
+  {
+    "id": "q30",
+    "question": "What was the front-right tyre wear at the end of the session (%)?",
+    "tools": [
+      "get_session_summary",
+      "get_tyre_wear"
+    ],
+    "call": {
+      "tool": "get_session_summary",
+      "args": {}
+    },
+    "path": "finalTyreWear.3",
+    "expected": 19.32,
+    "tolerance": 0.05,
+    "unit": "%"
+  },
+  {
+    "id": "q31",
+    "question": "Which tyre compound was used on lap 1?",
+    "tools": [
+      "get_tyre_wear"
+    ],
+    "call": {
+      "tool": "get_tyre_wear",
+      "args": {}
+    },
+    "path": "laps.0.compound",
+    "expected": "medium"
+  },
+  {
+    "id": "q32",
+    "question": "What was the rear-left tyre wear after lap 1 (%)?",
+    "tools": [
+      "get_tyre_wear"
+    ],
+    "call": {
+      "tool": "get_tyre_wear",
+      "args": {}
+    },
+    "path": "laps.0.wear.RL",
+    "expected": 1.95,
+    "tolerance": 0.05,
+    "unit": "%"
+  },
+  {
+    "id": "q33",
+    "question": "What was the top speed on lap 3 (km/h)?",
+    "tools": [
+      "compare_laps",
+      "get_car_telemetry"
+    ],
+    "call": {
+      "tool": "compare_laps",
+      "args": {
+        "lapA": 3,
+        "lapB": 1
+      }
+    },
+    "path": "topSpeedA",
+    "expected": 326.4,
+    "tolerance": 0.2,
+    "unit": "kph"
+  }
+]
