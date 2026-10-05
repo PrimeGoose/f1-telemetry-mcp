@@ -426,7 +426,7 @@
       "tool": "get_tyre_wear",
       "args": {}
     },
-    "path": "@argmax:avgWearPerLapPct",
+    "path": "avgWearPerLapPct.@argmax",
     "expected": "FR"
   },
   {

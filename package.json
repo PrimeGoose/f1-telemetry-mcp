@@ -19,7 +19,8 @@
     "generate:sample": "tsx scripts/generate-sample.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "eval": "tsx evals/run-deterministic.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
