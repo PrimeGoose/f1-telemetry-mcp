@@ -20,7 +20,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "eval": "tsx evals/run-deterministic.ts"
+    "eval": "tsx evals/run-deterministic.ts",
+    "eval:agent": "tsx evals/run-agent.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
