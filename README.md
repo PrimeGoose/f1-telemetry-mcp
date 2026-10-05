@@ -78,7 +78,7 @@ Recording stops after `--laps` completed laps or when you press Ctrl+C. The adap
 | `get_tyre_wear` | Wear (%) per corner per lap and average wear rate |
 | `get_car_telemetry` | Speed/throttle/brake/gear/RPM samples for a distance range, downsampled |
 
-Resources: `f1://session/summary` and `f1://session/laps/{lap}`. Inputs are validated with zod. Domain errors, like a lap that doesn't exist, come back as MCP tool errors rather than protocol failures.
+Resources: `f1://session/summary` and `f1://session/laps/{lapNumber}`. Inputs are validated with zod. Domain errors, like a lap that doesn't exist, come back as MCP tool errors rather than protocol failures.
 
 ## Evals
 
