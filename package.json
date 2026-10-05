@@ -6,7 +6,8 @@
   "license": "MIT",
   "author": "Kaspars Bergs",
   "bin": {
-    "f1-telemetry-mcp": "dist/index.js"
+    "f1-telemetry-mcp": "dist/index.js",
+    "f1-telemetry-record": "dist/record.js"
   },
   "main": "dist/index.js",
   "engines": {
@@ -21,7 +22,8 @@
     "typecheck": "tsc -p tsconfig.check.json",
     "test": "vitest run",
     "eval": "tsx evals/run-deterministic.ts",
-    "eval:agent": "tsx evals/run-agent.ts"
+    "eval:agent": "tsx evals/run-agent.ts",
+    "record": "tsx src/record.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

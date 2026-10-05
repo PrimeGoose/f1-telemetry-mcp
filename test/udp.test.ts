@@ -11,10 +11,12 @@ describe("SessionAssembler", () => {
     const a = new SessionAssembler();
     a.onLapData(lap(1, 10));
     a.onCarTelemetry(tel);
+    a.onCarStatus({ m_header: header, m_car_status_data: [{ m_visual_tyre_compound: 16 }] } as never);
     a.onCarDamage({ m_header: header, m_car_damage_data: [{ m_tyres_wear: [1, 2, 3, 4] }] } as never);
     a.onLapData(lap(2, 0, 84000));
     expect(a.session.laps).toHaveLength(1);
     expect(a.session.laps[0].sectorTimesMs).toEqual([25000, 30000, 29000]);
+    expect(a.session.laps[0].tyreCompound).toBe("soft");
     expect(a.session.laps[0].tyreWear).toEqual([1, 2, 3, 4]);
     expect(a.session.laps[0].samples[0].speedKph).toBe(300);
   });

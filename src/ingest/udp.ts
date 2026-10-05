@@ -2,12 +2,16 @@
  * Live ingest adapter for the F1 23 game UDP telemetry feed, built on the
  * `f1-23-udp` parser (https://github.com/raweceek-temeletry/f1-23-udp).
  *
- * It listens for lapData / carTelemetry / carDamage packets for the player car
+ * It listens for lapData / carTelemetry / carDamage / carStatus packets for the player car
  * and assembles them into the same `Session` model the MCP tools use.
  */
 import { F123UDP } from "f1-23-udp";
-import type { PacketCarDamageData, PacketCarTelemetryData, PacketLapData } from "f1-23-udp";
+import type { PacketCarDamageData, PacketCarStatusData, PacketCarTelemetryData, PacketLapData } from "f1-23-udp";
 import type { Lap, Session, TelemetrySample, TyreWear } from "../types.js";
+
+/** F1 23 visual tyre compound ids (CarStatus m_visual_tyre_compound). */
+const VISUAL_COMPOUND: Record<number, string> = { 16: "soft", 17: "medium", 18: "hard", 7: "intermediate", 8: "wet" };
+export const tyreCompoundName = (id: number): string => VISUAL_COMPOUND[id] ?? "unknown";
 
 export interface LiveIngestOptions {
   port?: number;
@@ -26,6 +30,7 @@ export class SessionAssembler {
   private s1 = 0;
   private s2 = 0;
   private wear: TyreWear = [0, 0, 0, 0];
+  private compound = "unknown";
 
   constructor(opts: LiveIngestOptions = {}) {
     this.session = {
@@ -52,7 +57,7 @@ export class SessionAssembler {
         lapTimeMs: d.m_lastLapTimeInMS,
         sectorTimesMs: [this.s1, this.s2, s3],
         valid: true,
-        tyreCompound: "unknown",
+        tyreCompound: this.compound,
         tyreWear: [...this.wear] as TyreWear,
         samples: this.samples,
       };
@@ -85,6 +90,11 @@ export class SessionAssembler {
     const d = p.m_car_damage_data[p.m_header.player_car_index];
     if (d) this.wear = d.m_tyres_wear.slice(0, 4) as TyreWear;
   }
+
+  onCarStatus(p: PacketCarStatusData): void {
+    const s = p.m_car_status_data[p.m_header.player_car_index];
+    if (s) this.compound = tyreCompoundName(s.m_visual_tyre_compound);
+  }
 }
 
 /** Binds a UDP socket (default port 20777) and feeds packets into a SessionAssembler. */
@@ -94,6 +104,7 @@ export function startLiveIngest(opts: LiveIngestOptions = {}) {
   client.on("lapData", (p) => assembler.onLapData(p));
   client.on("carTelemetry", (p) => assembler.onCarTelemetry(p));
   client.on("carDamage", (p) => assembler.onCarDamage(p));
+  client.on("carStatus", (p) => assembler.onCarStatus(p));
   client.start();
   return { session: assembler.session, stop: () => client.stop() };
 }
