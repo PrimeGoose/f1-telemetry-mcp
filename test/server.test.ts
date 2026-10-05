@@ -40,6 +40,6 @@ describe("MCP server", () => {
     const list = await c.listResources();
     expect(list.resources.map((r) => r.uri)).toContain("f1://session/laps/1");
     const r = await c.readResource({ uri: "f1://session/laps/2" });
-    expect(JSON.parse(r.contents[0].text as string).lapNumber).toBe(2);
+    expect(JSON.parse((r.contents[0] as { text: string }).text).lapNumber).toBe(2);
   });
 });

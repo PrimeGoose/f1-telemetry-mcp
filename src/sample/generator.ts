@@ -88,6 +88,10 @@ export function generateSession(opts: GenerateOptions = {}): Session {
     const avgWear = wear.reduce((a, b) => a + b, 0) / 4;
     const grip = 1.02 - avgWear / 400 + (rand() - 0.5) * 0.02;
     const v = speedProfile(segs, grip);
+    // Per-sector pace variation so sector bests land on different laps
+    // (theoretical best lap < fastest actual lap).
+    const sectorPace = [0, 1, 2].map(() => 1 + (rand() - 0.5) * 0.03);
+    for (let i = 0; i < v.length; i++) v[i] *= sectorPace[i * 10 < b1 ? 0 : i * 10 < b2 ? 1 : 2];
     const samples: TelemetrySample[] = [];
     let t = 0;
     for (let i = 0; i < v.length; i++) {

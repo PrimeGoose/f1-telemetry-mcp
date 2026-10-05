@@ -49,7 +49,7 @@
       "args": {}
     },
     "path": "fastestLap.lapTimeMs",
-    "expected": 82676,
+    "expected": 82266,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -64,7 +64,7 @@
       "args": {}
     },
     "path": "fastestLap.lapTime",
-    "expected": "1:22.676"
+    "expected": "1:22.266"
   },
   {
     "id": "q06",
@@ -77,7 +77,7 @@
       "args": {}
     },
     "path": "topSpeedKph",
-    "expected": 326.5,
+    "expected": 331.3,
     "tolerance": 0.1,
     "unit": "kph"
   },
@@ -133,7 +133,7 @@
       "args": {}
     },
     "path": "4.lapTimeMs",
-    "expected": 83720,
+    "expected": 83084,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -161,7 +161,7 @@
       "args": {}
     },
     "path": "@max:lapTimeMs.lapTimeMs",
-    "expected": 84379,
+    "expected": 85480,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -176,7 +176,7 @@
       "args": {}
     },
     "path": "2.sectorTimesMs.1",
-    "expected": 30465,
+    "expected": 29944,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -191,7 +191,7 @@
       "args": {}
     },
     "path": "7.sectorTimesMs.2",
-    "expected": 28955,
+    "expected": 29025,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -208,7 +208,7 @@
       }
     },
     "path": "lapNumber",
-    "expected": 1
+    "expected": 3
   },
   {
     "id": "q16",
@@ -223,7 +223,7 @@
       }
     },
     "path": "sectorTimeMs",
-    "expected": 30065,
+    "expected": 29746,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -240,7 +240,7 @@
       }
     },
     "path": "sectorTimeMs",
-    "expected": 28278,
+    "expected": 28067,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -257,7 +257,7 @@
       }
     },
     "path": "theoreticalBestMs",
-    "expected": 82676,
+    "expected": 82009,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -275,7 +275,7 @@
       }
     },
     "path": "lapTimeDeltaMs",
-    "expected": 450,
+    "expected": 507,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -293,7 +293,7 @@
       }
     },
     "path": "sectorDeltasMs.2",
-    "expected": 175,
+    "expected": -74,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -311,7 +311,7 @@
       }
     },
     "path": "lapTimeDeltaMs",
-    "expected": 1703,
+    "expected": 3214,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -329,7 +329,7 @@
       }
     },
     "path": "lapTimeDeltaMs",
-    "expected": 445,
+    "expected": -898,
     "tolerance": 0,
     "unit": "ms"
   },
@@ -378,7 +378,7 @@
       }
     },
     "path": "zones.@min:minSpeedKph.minSpeedKph",
-    "expected": 75.4,
+    "expected": 76.8,
     "tolerance": 0.5,
     "unit": "kph"
   },
@@ -412,7 +412,7 @@
       }
     },
     "path": "zones.5.minSpeedKph",
-    "expected": 83.3,
+    "expected": 82.6,
     "tolerance": 0.5,
     "unit": "kph"
   },
@@ -440,7 +440,7 @@
       "args": {}
     },
     "path": "avgWearPerLapPct.FL",
-    "expected": 2.26,
+    "expected": 2.22,
     "tolerance": 0.02,
     "unit": "%"
   },
@@ -456,7 +456,7 @@
       "args": {}
     },
     "path": "finalTyreWear.3",
-    "expected": 19.32,
+    "expected": 19.21,
     "tolerance": 0.05,
     "unit": "%"
   },
@@ -484,7 +484,7 @@
       "args": {}
     },
     "path": "laps.0.wear.RL",
-    "expected": 1.95,
+    "expected": 1.96,
     "tolerance": 0.05,
     "unit": "%"
   },
@@ -503,7 +503,7 @@
       }
     },
     "path": "topSpeedA",
-    "expected": 326.4,
+    "expected": 329.7,
     "tolerance": 0.2,
     "unit": "kph"
   }

@@ -1,11 +1,11 @@
 {
   "summary": {
     "mode": "deterministic",
-    "generatedAt": "2026-10-05T04:26:06.879Z",
+    "generatedAt": "2026-10-05T04:27:04.526Z",
     "total": 33,
     "passed": 33,
     "passRate": 1,
-    "avgLatencyMs": 0.4892447272727295
+    "avgLatencyMs": 0.4936540909090933
   },
   "results": [
     {
@@ -14,7 +14,7 @@
       "expected": 8,
       "actual": 8,
       "pass": true,
-      "latencyMs": 3.375114999999994,
+      "latencyMs": 3.7401800000000094,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -25,7 +25,7 @@
       "expected": 8,
       "actual": 8,
       "pass": true,
-      "latencyMs": 0.6080220000000054,
+      "latencyMs": 0.6252870000000144,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -36,7 +36,7 @@
       "expected": 1,
       "actual": 1,
       "pass": true,
-      "latencyMs": 0.43502800000004527,
+      "latencyMs": 0.4380659999999921,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -44,10 +44,10 @@
     {
       "id": "q04",
       "question": "What was the fastest lap time in milliseconds?",
-      "expected": 82676,
-      "actual": 82676,
+      "expected": 82266,
+      "actual": 82266,
       "pass": true,
-      "latencyMs": 0.4446909999999775,
+      "latencyMs": 0.47012799999998833,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -55,10 +55,10 @@
     {
       "id": "q05",
       "question": "What was the fastest lap time formatted as m:ss.sss?",
-      "expected": "1:22.676",
-      "actual": "1:22.676",
+      "expected": "1:22.266",
+      "actual": "1:22.266",
       "pass": true,
-      "latencyMs": 0.6974170000000299,
+      "latencyMs": 0.7713469999999916,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -66,10 +66,10 @@
     {
       "id": "q06",
       "question": "What was the top speed reached in the session (km/h)?",
-      "expected": 326.5,
-      "actual": 326.5,
+      "expected": 331.3,
+      "actual": 331.3,
       "pass": true,
-      "latencyMs": 0.4102430000000368,
+      "latencyMs": 0.4327299999999923,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -80,7 +80,7 @@
       "expected": 4500,
       "actual": 4500,
       "pass": true,
-      "latencyMs": 0.31370199999997794,
+      "latencyMs": 0.3089919999999893,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -91,7 +91,7 @@
       "expected": "Practice",
       "actual": "Practice",
       "pass": true,
-      "latencyMs": 0.7658490000000029,
+      "latencyMs": 0.6394070000000056,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -102,7 +102,7 @@
       "expected": true,
       "actual": true,
       "pass": true,
-      "latencyMs": 0.5334770000000049,
+      "latencyMs": 1.6046910000000025,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -110,10 +110,10 @@
     {
       "id": "q10",
       "question": "What was the lap time of lap 5 in milliseconds?",
-      "expected": 83720,
-      "actual": 83720,
+      "expected": 83084,
+      "actual": 83084,
       "pass": true,
-      "latencyMs": 0.4132929999999533,
+      "latencyMs": 0.45472100000000637,
       "toolCalls": [
         "get_lap_times"
       ]
@@ -124,7 +124,7 @@
       "expected": 8,
       "actual": 8,
       "pass": true,
-      "latencyMs": 0.19579399999997804,
+      "latencyMs": 0.21106400000002168,
       "toolCalls": [
         "get_lap_times"
       ]
@@ -132,10 +132,10 @@
     {
       "id": "q12",
       "question": "What was the slowest lap time in milliseconds?",
-      "expected": 84379,
-      "actual": 84379,
+      "expected": 85480,
+      "actual": 85480,
       "pass": true,
-      "latencyMs": 0.13331099999999196,
+      "latencyMs": 0.11965000000003556,
       "toolCalls": [
         "get_lap_times"
       ]
@@ -143,10 +143,10 @@
     {
       "id": "q13",
       "question": "What was the sector 2 time on lap 3 in milliseconds?",
-      "expected": 30465,
-      "actual": 30465,
+      "expected": 29944,
+      "actual": 29944,
       "pass": true,
-      "latencyMs": 0.07592899999997371,
+      "latencyMs": 0.07995899999997391,
       "toolCalls": [
         "get_lap_times"
       ]
@@ -154,10 +154,10 @@
     {
       "id": "q14",
       "question": "What was the sector 3 time on lap 8 in milliseconds?",
-      "expected": 28955,
-      "actual": 28955,
+      "expected": 29025,
+      "actual": 29025,
       "pass": true,
-      "latencyMs": 0.06630000000001246,
+      "latencyMs": 0.06456600000001345,
       "toolCalls": [
         "get_lap_times"
       ]
@@ -165,10 +165,10 @@
     {
       "id": "q15",
       "question": "Which lap had the fastest sector 1?",
-      "expected": 1,
-      "actual": 1,
+      "expected": 3,
+      "actual": 3,
       "pass": true,
-      "latencyMs": 0.43358899999998357,
+      "latencyMs": 0.4037799999999834,
       "toolCalls": [
         "get_fastest_sector"
       ]
@@ -176,10 +176,10 @@
     {
       "id": "q16",
       "question": "What is the fastest sector 2 time in milliseconds?",
-      "expected": 30065,
-      "actual": 30065,
+      "expected": 29746,
+      "actual": 29746,
       "pass": true,
-      "latencyMs": 0.1382080000000201,
+      "latencyMs": 0.11958700000002409,
       "toolCalls": [
         "get_fastest_sector"
       ]
@@ -187,10 +187,10 @@
     {
       "id": "q17",
       "question": "What is the fastest sector 3 time in milliseconds?",
-      "expected": 28278,
-      "actual": 28278,
+      "expected": 28067,
+      "actual": 28067,
       "pass": true,
-      "latencyMs": 0.0801089999999931,
+      "latencyMs": 0.07499599999999873,
       "toolCalls": [
         "get_fastest_sector"
       ]
@@ -198,10 +198,10 @@
     {
       "id": "q18",
       "question": "What is the theoretical best lap time in milliseconds?",
-      "expected": 82676,
-      "actual": 82676,
+      "expected": 82009,
+      "actual": 82009,
       "pass": true,
-      "latencyMs": 0.1338039999999978,
+      "latencyMs": 0.13428400000003649,
       "toolCalls": [
         "get_fastest_sector"
       ]
@@ -209,10 +209,10 @@
     {
       "id": "q19",
       "question": "How much slower was lap 2 than lap 1, in milliseconds?",
-      "expected": 450,
-      "actual": 450,
+      "expected": 507,
+      "actual": 507,
       "pass": true,
-      "latencyMs": 1.2592950000000087,
+      "latencyMs": 1.253116000000034,
       "toolCalls": [
         "compare_laps"
       ]
@@ -220,10 +220,10 @@
     {
       "id": "q20",
       "question": "How much time did lap 2 lose to lap 1 in sector 3, in milliseconds?",
-      "expected": 175,
-      "actual": 175,
+      "expected": -74,
+      "actual": -74,
       "pass": true,
-      "latencyMs": 0.79553999999996,
+      "latencyMs": 0.7535280000000171,
       "toolCalls": [
         "compare_laps"
       ]
@@ -231,10 +231,10 @@
     {
       "id": "q21",
       "question": "What is the lap time delta of lap 8 relative to lap 1, in milliseconds?",
-      "expected": 1703,
-      "actual": 1703,
+      "expected": 3214,
+      "actual": 3214,
       "pass": true,
-      "latencyMs": 0.5805209999999761,
+      "latencyMs": 0.9780160000000251,
       "toolCalls": [
         "compare_laps"
       ]
@@ -242,10 +242,10 @@
     {
       "id": "q22",
       "question": "How much faster was lap 4 than lap 3, in milliseconds (positive number)?",
-      "expected": 445,
-      "actual": 445,
+      "expected": -898,
+      "actual": -898,
       "pass": true,
-      "latencyMs": 0.177346,
+      "latencyMs": 0.298294999999996,
       "toolCalls": [
         "compare_laps"
       ]
@@ -256,7 +256,7 @@
       "expected": 6,
       "actual": 6,
       "pass": true,
-      "latencyMs": 0.3081060000000093,
+      "latencyMs": 0.36554399999999987,
       "toolCalls": [
         "find_braking_points"
       ]
@@ -267,7 +267,7 @@
       "expected": 820,
       "actual": 820,
       "pass": true,
-      "latencyMs": 2.3261590000000183,
+      "latencyMs": 0.16133899999999812,
       "toolCalls": [
         "find_braking_points"
       ]
@@ -275,10 +275,10 @@
     {
       "id": "q25",
       "question": "What is the minimum speed in the slowest corner on lap 1 (km/h)?",
-      "expected": 75.4,
-      "actual": 75.4,
+      "expected": 76.8,
+      "actual": 76.8,
       "pass": true,
-      "latencyMs": 0.1517369999999687,
+      "latencyMs": 0.1258100000000013,
       "toolCalls": [
         "find_braking_points"
       ]
@@ -289,7 +289,7 @@
       "expected": 2320,
       "actual": 2320,
       "pass": true,
-      "latencyMs": 0.10156299999999874,
+      "latencyMs": 0.11769499999996924,
       "toolCalls": [
         "find_braking_points"
       ]
@@ -297,10 +297,10 @@
     {
       "id": "q27",
       "question": "What was the minimum speed in the final braking zone on lap 8 (km/h)?",
-      "expected": 83.3,
-      "actual": 83.3,
+      "expected": 82.6,
+      "actual": 82.6,
       "pass": true,
-      "latencyMs": 0.09351000000003751,
+      "latencyMs": 0.11698699999999462,
       "toolCalls": [
         "find_braking_points"
       ]
@@ -311,7 +311,7 @@
       "expected": "FR",
       "actual": "FR",
       "pass": true,
-      "latencyMs": 0.3018690000000106,
+      "latencyMs": 0.28609199999999646,
       "toolCalls": [
         "get_tyre_wear"
       ]
@@ -319,10 +319,10 @@
     {
       "id": "q29",
       "question": "What is the average front-left tyre wear per lap (%)?",
-      "expected": 2.26,
-      "actual": 2.26,
+      "expected": 2.22,
+      "actual": 2.22,
       "pass": true,
-      "latencyMs": 0.17985500000003185,
+      "latencyMs": 0.20420400000000427,
       "toolCalls": [
         "get_tyre_wear"
       ]
@@ -330,10 +330,10 @@
     {
       "id": "q30",
       "question": "What was the front-right tyre wear at the end of the session (%)?",
-      "expected": 19.32,
-      "actual": 19.32,
+      "expected": 19.21,
+      "actual": 19.21,
       "pass": true,
-      "latencyMs": 0.2620260000000485,
+      "latencyMs": 0.4965700000000197,
       "toolCalls": [
         "get_session_summary"
       ]
@@ -344,7 +344,7 @@
       "expected": "medium",
       "actual": "medium",
       "pass": true,
-      "latencyMs": 0.09987300000000232,
+      "latencyMs": 0.1321559999999522,
       "toolCalls": [
         "get_tyre_wear"
       ]
@@ -352,10 +352,10 @@
     {
       "id": "q32",
       "question": "What was the rear-left tyre wear after lap 1 (%)?",
-      "expected": 1.95,
-      "actual": 1.95,
+      "expected": 1.96,
+      "actual": 1.96,
       "pass": true,
-      "latencyMs": 0.11486600000000635,
+      "latencyMs": 0.09823199999999588,
       "toolCalls": [
         "get_tyre_wear"
       ]
@@ -363,10 +363,10 @@
     {
       "id": "q33",
       "question": "What was the top speed on lap 3 (km/h)?",
-      "expected": 326.4,
-      "actual": 326.4,
+      "expected": 329.7,
+      "actual": 329.7,
       "pass": true,
-      "latencyMs": 0.13892900000001873,
+      "latencyMs": 0.20956599999999526,
       "toolCalls": [
         "compare_laps"
       ]
